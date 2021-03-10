@@ -1,0 +1,22 @@
+# Editor files
+.vscode/
+
+# python files
+__pycache__/
+.pytest_cache/
+
+# tests files
+htmlcov/
+.coverage
+coverage.xml
+.tox/
+
+# profileing files
+output.png
+stats
+
+# python build files
+*.egg-info
+.egg
+build/
+dist/
