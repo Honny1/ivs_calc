@@ -20,3 +20,7 @@ stats
 .egg
 build/
 dist/
+
+# ignore duplicite files
+src/LICENSE
+src/README.md
