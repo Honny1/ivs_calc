@@ -1,34 +1,42 @@
+"""@package MathLib
+Documentation of Mathlib
+
 """
-    example for math lib
-"""
 
 
-class ExampleMathLib():
-    """ Some epic docstring
-    """
+class MathLib():
+    """Creates stack"""
+    def __init__():
+        pass
 
+    """Pushes value to stack"""
+    def _push(element):
+        pass
+
+    """Returns last value"""
+    def _pop():
+        pass
+
+    """Returns the top of stack"""
+    def _top(stack):
+        pass
+
+    """Solves equation from postfix"""
     @staticmethod
-    def sum_a_b(num_a, num_b):
-        """Sum A and B
+    def postfix_eval(postfix_string):
+        pass
 
-            args:
-                a (int)
-                b (int)
-
-            returns:
-                int
-        """
-        return num_a + num_b
-
+    """Translate equation input string to postfix"""
     @staticmethod
-    def odd_a_b(num_a, num_b):
-        """Odd A and B
+    def string_to_postfix(input_string):
+        pass
 
-            args:
-                a (int)
-                b (int)
+    """Translate equation input string to postfix"""
+    @staticmethod
+    def solve_mathematic_problem(input_string):
+        pass
 
-            returns:
-                int
-        """
-        return num_a - num_b
+    """Clear stack"""
+    @staticmethod
+    def clear_stack():
+        pass
