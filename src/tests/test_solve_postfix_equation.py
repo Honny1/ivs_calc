@@ -4,7 +4,6 @@ Test Postfix evaluation
 from duck_calc.math_lib.math_lib import MathLib
 import pytest
 
-
 @pytest.mark.parametrize("problem, result", [
     ("1 1 +", 2),
     ("11 9 +", 20),
@@ -49,7 +48,6 @@ import pytest
 
 def test_postfix_conversion(problem, result):
     assert MathLib.solve_mathematic_problem(problem) == result
-
 
 @pytest.mark.parametrize("problem", [
     ("velký špatný"),
