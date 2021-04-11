@@ -4,6 +4,7 @@ Test Postfix evaluation
 from duck_calc.math_lib.math_lib import MathLib
 import pytest
 
+
 @pytest.mark.parametrize("problem, result", [
     ("1 1 +", 2),
     ("11 9 +", 20),
@@ -45,10 +46,10 @@ import pytest
     ("987654322 2 827161 7000000 / - +", 500000000),
     ("-987654322 2 -827161 -7000000 /", -500000000)
 ])
-
 def test_postfix_conversion(problem, result):
     assert MathLib.solve_mathematic_problem(problem) == result
 
+    
 @pytest.mark.parametrize("problem", [
     ("velký špatný"),
     ("1 0 /"),
@@ -60,7 +61,6 @@ def test_postfix_conversion(problem, result):
     ("87aef7 +"),
     ("-78sf885 2 -")
 ])
-
 def test_bad_input(problem):
     result_of_mathlib = MathLib.solve_mathematic_problem(problem)
     assert result_of_mathlib is None
