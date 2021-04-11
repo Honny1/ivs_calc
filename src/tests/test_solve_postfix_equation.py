@@ -49,7 +49,7 @@ import pytest
 def test_postfix_conversion(problem, result):
     assert MathLib.solve_mathematic_problem(problem) == result
 
-    
+
 @pytest.mark.parametrize("problem", [
     ("velký špatný"),
     ("1 0 /"),
