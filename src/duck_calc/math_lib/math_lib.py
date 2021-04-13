@@ -36,6 +36,11 @@ class MathLib():
     def solve_mathematic_problem(input_string):
         pass
 
+    """Eval input postfix to number"""
+    @staticmethod
+    def solve_postfix_equation(input_postfix):
+        pass
+
     """Clear stack"""
     @staticmethod
     def clear_stack():

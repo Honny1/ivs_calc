@@ -1,6 +1,7 @@
+"""@package tests
+Test for solving the postfix equation
 """
-Test Postfix evaluation
-"""
+
 from duck_calc.math_lib.math_lib import MathLib
 import pytest
 
@@ -81,7 +82,7 @@ import pytest
 
 ])
 def test_postfix_conversion(problem, result):
-    assert MathLib.solve_mathematic_problem(problem) == result
+    assert MathLib.solve_postfix_equation(problem) == result
 
 
 @pytest.mark.parametrize("problem", [
@@ -98,5 +99,5 @@ def test_postfix_conversion(problem, result):
     ("-78sf885 2 -")
 ])
 def test_bad_input(problem):
-    result_of_mathlib = MathLib.solve_mathematic_problem(problem)
+    result_of_mathlib = MathLib.solve_postfix_equation(problem)
     assert result_of_mathlib is None
