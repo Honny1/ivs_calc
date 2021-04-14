@@ -45,8 +45,6 @@ import pytest
     ("48 _ 41 _ 54 + _ 47 _ 2", "48 _ 41 _ 54 + _ 47 _ 2"),
     ("4 ^ 25 ^ 42 + 8 / 8", "425 ^ 42 ^ 88 / +"),
     ("8 + 9 ^ 5 ^ 8 ^ 8 ^ 8", "8 9 5 ^ 8 ^ 8 ^ 8 ^ +"),
-    ("5 _ 56 _ 8 _ 7 ^ 48 + 4 + 8 - 55 _ 4 + 4 ^ 4", "5 56 _ 8 _ 7 _ 48 ^ 4 + 8 + 55 4 _ - 4 4 ^ +"),
-    ("sin 8 + sin 6 * 8 / 7 ^ cos 54 ^ 74 + 65 + sin 86 + 4 * 4 ^ cos 4", "8 sin 6 sin 8 * 7 54 cos ^ 74 ^ / + 65 + 86 sin + 4 4 4 cos ^ * +"),
     ("1+1", "1 1 +"),
     ("23+-13", "23 -13 +"),
     ("-17+-111", "-17 -111 +"),
@@ -86,11 +84,10 @@ import pytest
     ("48_41_54+_47_2", "48 _ 41 _ 54 + _ 47 _ 2"),
     ("4^25^42+8/8", "425 ^ 42 ^ 88 / +"),
     ("8+9^5^8^8^8", "8 9 5 ^ 8 ^ 8 ^ 8 ^ +"),
-    ("5_56_8_7^48+4+8-55_4+4^4", "5 56 _ 8 _ 7 _ 48 ^ 4 + 8 + 55 4 _ - 4 4 ^ +"),
-    ("sin8+sin6*8/7^cos54^74+65+sin86+4*4^cos4", "8 sin 6 sin 8 * 7 54 cos ^ 74 ^ / + 65 + 86 sin + 4 4 4 cos ^ * +"),
 ])
 def test_stringToPostfix_conversion(problem, result):
     assert MathLib.transform_string_to_postfix(problem) == result
+
 
 @pytest.mark.parametrize("problem", [
     ("Lorem Ipsum"),
@@ -118,4 +115,4 @@ def test_stringToPostfix_conversion(problem, result):
 def test_wrong_input(problem):
     result_of_mathlib = transform_string_to_postfix(problem)
     assert result_of_mathlib is None
-    
+
