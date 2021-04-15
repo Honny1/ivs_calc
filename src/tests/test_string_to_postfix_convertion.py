@@ -113,5 +113,5 @@ def test_stringToPostfix_conversion(problem, result):
     ("788-0 *"),
 ])
 def test_wrong_input(problem):
-    result_of_mathlib = transform_string_to_postfix(problem)
+    result_of_mathlib = MathLib.transform_string_to_postfix(problem)
     assert result_of_mathlib is None
