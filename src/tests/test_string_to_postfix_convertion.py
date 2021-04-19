@@ -7,6 +7,7 @@ from duck_calc.math_lib.math_lib import MathLib
 
 
 @pytest.mark.parametrize("problem, result", [
+    # TODO: sin and cos should have brackets
     ("1 + 1", "1 1 +"),
     ("23 + -13", "23 -13 +"),
     ("-17 + -111", "-17 -111 +"),
@@ -91,27 +92,28 @@ def test_stringToPostfix_conversion(problem, result):
 
 
 @pytest.mark.parametrize("problem", [
+    # TODO: I am not able to check the wrong string here
     ("Lorem Ipsum"),
-    ("1 / 0"),
-    ("-1 / 0"),
-    ("0 + 1 +"),
-    ("0 / 1 /"),
-    ("/ 0 / 1"),
+    ("1 / 0"), #
+    ("-1 / 0"), #
+    ("0 + 1 +"), #
+    ("0 / 1 /"), #
+    ("/ 0 / 1"), #
     ("55sadf / 2"),
     ("54fa * 2"),
     ("87aef7 +"),
     ("-78sf885 - 2"),
-    ("7888 - 0 *"),
-    ("1/0"),
-    ("-1/0"),
-    ("0+1+"),
-    ("0/1/"),
-    ("/0/1"),
+    ("7888 - 0 *"), #
+    ("1/0"), #
+    ("-1/0"), #
+    ("0+1+"), #
+    ("0/1/"), #
+    ("/0/1"), #
     ("55sadf/2"),
     ("54fa*2"),
     ("87aef7+"),
     ("-78sf885-2"),
-    ("788-0 *"),
+    ("788-0 *"), #
 ])
 def test_wrong_input(problem):
     result_of_mathlib = MathLib.transform_string_to_postfix(problem)
