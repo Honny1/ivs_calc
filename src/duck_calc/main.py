@@ -1,5 +1,10 @@
 """Command line entry points (exec file)
 """
+import sys
+
+from PySide2.QtWidgets import QApplication
+
+from .gui import calc_main
 
 
 def foo_run():
@@ -26,5 +31,12 @@ def foo_run():
         `\"""`        `\"""`     ;'""")
 
 
+def run():
+    app = QApplication([])
+    widget = calc_main()
+    widget.show()
+    sys.exit(app.exec_())
+
+
 if __name__ == '__main__':
-    foo_run()
+    run()
