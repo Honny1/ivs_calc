@@ -2,7 +2,7 @@
 Documentation of Mathlib
 
 """
-
+import math
 
 class MathLib():
     """Creates stack"""
@@ -11,14 +11,14 @@ class MathLib():
         self.top_index = 0
         self.output = ""
         self.precedence = {
-            'sin': 0,
-            'cos': 0,
             '+': 1,
             '-': 1,
             '*': 2,
             '/': 2,
             '^': 3,
-            '_': 3
+            '_': 3,
+            'sin': 3,
+            'cos': 3
         }
 
     """Pushes value to stack"""
@@ -68,7 +68,6 @@ class MathLib():
             # Num
             if input_string[i].isdigit():
                 i = stack._load_num(input_string, i, len_of_input)
-
                 if i is None:
                     return None
                 continue
@@ -76,20 +75,27 @@ class MathLib():
             # Operation
             operator = input_string[i]
             if operator == "-":
-                if i == 0:
-                    stack.output = "-"
-                elif not input_string[i-1].isnumeric():
-                    stack.output += " -"
+                if i == 0 or not input_string[i-1].isnumeric():
+                    stack.output += "-"
+                    i += 1
+                    i = stack._load_num(input_string, i, len_of_input)
+                    if i is None:
+                        return None
+                    continue
                 else:
                     stack._push(operator)
-
+            # Sin
             elif operator == "s":
-                stack._push("sin")
-                i += 3
+                i = MathLib.evaluate_sin_and_cos(input_string, i, stack, "sin")
+                if i is None:
+                    return None
+            # Cos
             elif operator == "c":
-                stack._push("cos")
-                i += 3
-            elif operator in "+\*":
+                i = MathLib.evaluate_sin_and_cos(input_string, i, stack, "cos")
+                if i is None:
+                    return None
+            # Normal operators
+            elif operator in "+\*^_":
                 stack._push(operator)
             else:
                 return None
@@ -127,21 +133,30 @@ class MathLib():
         result = ""
 
         for element in input_postfix.split():
-            if element.isdigit():
+            if element.isnumeric():
                 stack._push(element)
             else:
-                val1 = stack._pop()
-                val2 = stack._pop()
+                if element == "sin" or element == "cos":
+                    val1 = stack._pop()
+                    if val1 is None:
+                        return None
+                    result = str(eval(element + "(" + val1 + ")"))
+                else:       
+                    val1 = stack._pop()
+                    val2 = stack._pop()
 
-                if element == "^":
-                    result = str(eval(val2 + "**" + val1))
-                elif element == "_":
-                    result = str(eval(val2 + "**(1/" + val1 + ")"))
-                else:
-                    result = str(eval(val2 + element + val1))
+                    if element == "^":
+                        result = str(eval(val2 + "**" + val1))
+                    elif element == "_":
+                        # root
+                        result = str(eval(val2 + "**(1/" + val1 + ")"))
+                    else:
+                        result = str(eval(val2 + element + val1))
                 stack._push(result)
         return int(stack._pop())
 
+
+    """Goes through input_string and gets whole number"""
     def _load_num(self, input_string, i, len_of_input):
         while input_string[i].isdigit() \
                 or input_string[i] == "e" \
@@ -159,7 +174,7 @@ class MathLib():
                 self.output += input_string[i + 1]
                 i += 2
                 continue
-            
+
             # Check float
             if input_string[i] == ".":
                 if i + 1 >= len_of_input or i == 0:
@@ -173,4 +188,27 @@ class MathLib():
             # Handle end of string
             if i >= len_of_input:
                 break
+        return i
+
+
+    """Makes number from sin and cos"""
+    @staticmethod
+    def evaluate_sin_and_cos(input_string, i, stack, stringType):
+        in_braces = ""
+        result = 0
+        i += 4
+        len_of_input = len(input_string)
+        while i < len_of_input and input_string[i] != ")":
+            in_braces += input_string[i]
+            i += 1
+
+        try:
+            result = eval("math." + stringType + "(" + in_braces + ")")
+        except SyntaxError:
+            return None
+
+        if i != 0:
+            stack.output += " "
+        stack.output += str(result)
+
         return i
