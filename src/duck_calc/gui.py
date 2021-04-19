@@ -18,7 +18,7 @@ class calc_main(QWidget):
 
     def load_ui(self):
         loader = QUiLoader()
-        path = os.path.join(os.path.dirname(__file__), "gui.ui")
+        path = os.path.join(os.path.dirname(__file__), "ui/gui.ui")
         ui_file = QFile(path)
         ui_file.open(QFile.ReadOnly)
         loader.load(ui_file, self)
