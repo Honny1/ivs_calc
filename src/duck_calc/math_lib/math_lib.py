@@ -2,8 +2,8 @@
 Documentation of Mathlib
 
 """
-import re
 import math
+import re
 
 
 class MathLib():
@@ -148,12 +148,20 @@ class MathLib():
                         stack.output += " " + stack._pop()
                     stack._push(operator)
             # Sin
-            elif operator == "s":
+            elif operator == "s" and i + 5 < len_of_input:
+                if not (input_string[i + 1] == "i"
+                   and input_string[i + 2] == "n"
+                   and input_string[i + 3] == "("):
+                    return None
                 i = MathLib.evaluate_sin_and_cos(input_string, i, stack, "sin")
                 if i is None:
                     return None
             # Cos
-            elif operator == "c":
+            elif operator == "c" and i + 5 < len_of_input:
+                if not (input_string[i + 1] == "o"
+                   and input_string[i + 2] == "s"
+                   and input_string[i + 3] == "("):
+                    return None
                 i = MathLib.evaluate_sin_and_cos(input_string, i, stack, "cos")
                 if i is None:
                     return None
