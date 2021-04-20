@@ -1,0 +1,24 @@
+TERMÍNY:
+	19.3. Setup GitHub - xrodak00
+	31.3. Návrh rozhraní matematické knihovny - všichni
+	10.4. TDD pro matematickou knihovnu - všichni
+	17.4. Naprogramování matematické knihovny - xszabo16
+	17.4. GUI Kalkulačky - xsuman02
+	19.4. Zprovoznit Makefile - xsuman02
+	24.4. Instalátor - xrodak00
+  	24.4. Dokumentace - xszabo16
+	24.4. Profiling - xklofe01
+	25.4. Mock-upy - všichni
+	25.4. DEBUG - xszabo16
+	30.4. Odevzdání projektu - xszabo16
+       	3.5. Feedback - všichni
+
+KOMUNIKAČNÍ KANÁLY:
+	- Facebook
+	- GitHub
+	- Discord
+	- telefon
+
+VERZOVACÍ SYSTÉM:
+	- GitHub
+	- https://github.com/Honny1/ivs_calc
