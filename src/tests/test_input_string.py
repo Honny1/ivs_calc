@@ -112,17 +112,7 @@ def test_solve_problem_with_int_result(problem, result):
     ("cos(420.999)+5", 5.999672736604822),
     ("cos(55.1)", 0.12182518941147201),
     ("cos(-55.2)", 0.2203063855384424),
-    ("cos(100.11+10.9)", -0.4938738217438979),
-    # Bracket
-    # ("(1*1)+1", 2),
-    # ("(1 * 1 ) + 1", 2),
-    # ("(69*2)*3", 414),
-    # ("-3+(2+21)^2", 526),
-    # ("2+4*3+7", 21),
-    # ("(2+4)*(3+7)", 60),
-    # ("(2+4)_(3+7)", 1.196231199),
-    # ("(2+4)^(3+7)", 60466176),
-    # ("-100.11*(-10.9*4)+3", 4367.796),
+    ("cos(100.11+10.9)", -0.4938738217438979)
 ])
 def test_solve_problem_with_float_result(problem, result):
     result_of_mathlib = MathLib.solve_mathematic_problem(problem)
@@ -182,16 +172,4 @@ def test_extream_div():
 #     nums = [str(i) for i in range(5, 8, 1)]
 #     problem = "^".join(nums)
 #     result = 227373675443232059478759765625
-#     assert MathLib.solve_mathematic_problem(problem) == result
-
-
-# def test_advance_math_problem():
-#     problem = "1+(1/(1+(1/(1+(1/(1+(1/1)))))))"
-#     result = 1.6
-#     assert MathLib.solve_mathematic_problem(problem) == result
-
-
-# def test_advance_math_problem_1():
-#     problem = "((44*(32+12)^2)_2)+2*3+3"
-#     result = 300.8629816
 #     assert MathLib.solve_mathematic_problem(problem) == result
