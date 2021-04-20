@@ -3,6 +3,7 @@
 set -e
 version="0.0.0"
 
+# build dependency 
 sudo apt-get install -y build-essential devscripts debhelper debmake dh-python python3-all python3-pip python3-pyqt5 qt5-default 
 
 python3 setup.py sdist
@@ -12,11 +13,14 @@ tar -xzmf duck-calc-${version}.tar.gz && cd duck-calc-${version}/
 
 debmake -b":python3"
 
+# Vytvori script, ktery se pousti po instalaci balicku
 {
     echo '#!/bin/bash'
     echo 'pip3 install --no-warn-script-location PyQt5==5.15.4 PyQt5-Qt5==5.15.2 PyQt5-sip==12.8.1 PySide2==5.15.2'
 } >> debian/postinst
 
+
+# Prepise control file 
 rm debian/control
 
 {
