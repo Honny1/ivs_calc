@@ -6,6 +6,8 @@ import pytest
 
 from duck_calc.math_lib.math_lib import MathLib
 
+EPSILON = 0.0001
+
 
 @pytest.mark.parametrize("problem, result", [
     ("1 1 +", 2),
@@ -26,11 +28,11 @@ from duck_calc.math_lib.math_lib import MathLib
 
     ("1 0 *", 0),
     ("3 3 *", 9),
-    ("120 20", 2400),
-    ("-1 1 *", 0),
+    ("120 20 *", 2400),
+    ("-1 1 *", -1),
     ("5 -6 *", -30),
-    ("9876543 123456 *", 451149483006),
-    ("-987654 123456 *", -451149483006),
+    ("9876543 123456 *", 1219318492608),
+    ("-9876543 123456 *", -1219318492608),
 
     ("0 1 /", 0),
     ("20 4 /", 5),
@@ -67,10 +69,9 @@ from duck_calc.math_lib.math_lib import MathLib
     ("875564896227 1 _", 875564896227),
     ("1235.563 1.2 _", 377.1847094765633),
     ("59872369.547896589 11.369 _", 4.83140055442166),
-
     ("0 1 ^", 0),
     ("1 1 ^", 1),
-    ("1 0 ^", 0),
+    ("1 0 ^", 1),
     ("43 2 ^", 1849),
     ("100 3 ^", 1000000),
     ("-2 -1 ^", -0.5),
@@ -86,11 +87,13 @@ from duck_calc.math_lib.math_lib import MathLib
     ("43 sin 69.69 + 1 cos +", 69.3985275632),
     ("100 sin 3 / 33.852 cos -", 0.59248644973),
     ("987654322 2 / 827161 - 7000000 +", 500000000),
-    ("-987654322 2 / 827161 - 7000000 -", -500000000)
+    ("-987654322 2 / 827161 - 7000000 -", -501654322)
 
 ])
 def test_postfix_conversion(problem, result):
-    assert MathLib.solve_postfix_equation(problem) == result
+    num = float(MathLib.solve_postfix_equation(problem))
+    assert abs(num - result) < EPSILON or \
+        num == result
 
 
 @pytest.mark.parametrize("problem", [
