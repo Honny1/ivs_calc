@@ -3,6 +3,7 @@ Documentation of Mathlib
 
 """
 import re
+import math
 
 
 class MathLib():
@@ -37,7 +38,7 @@ class MathLib():
     """Returns the top of stack"""
     def _top(self):
         if self.top_index:
-            return self.op_stack[self.top_index-1]
+            return self.op_stack[self.top_index - 1]
         return None
 
     """Compares two if first not greater """
@@ -130,8 +131,8 @@ class MathLib():
             # Operation
             elif operator == "-":
                 if i == 0 or not \
-                    stack._isNumber(input_string[i-1]) and \
-                        input_string[i-1] not in ")(":
+                    stack._isNumber(input_string[i - 1]) and \
+                        input_string[i - 1] not in ")(":
                     stack.output += "-"
                     i += 1
                     i = stack._load_num(input_string, i, len_of_input)
@@ -169,7 +170,7 @@ class MathLib():
             i += 1
 
         # Empty stack
-        if stack.output[len(stack.output)-1] != " ":
+        if stack.output[len(stack.output) - 1] != " ":
             stack.output += " "
         while stack.top_index != 0:
             stack.output += str(stack._pop()) + " "
