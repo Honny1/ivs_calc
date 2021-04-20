@@ -1,9 +1,9 @@
 """@package tests
 Test for input string
 """
-from duck_calc.math_lib.math_lib import MathLib
 import pytest
 
+from duck_calc.math_lib.math_lib import MathLib
 
 EPSILON = 0.0001
 

@@ -2,8 +2,9 @@
 Test for solving the postfix equation
 """
 
-from duck_calc.math_lib.math_lib import MathLib
 import pytest
+
+from duck_calc.math_lib.math_lib import MathLib
 
 
 @pytest.mark.parametrize("problem, result", [
