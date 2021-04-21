@@ -23,9 +23,9 @@ setup(name='duck-calc',
       install_requires=get_requirements(),
       include_package_data=True,
       data_files=[
-        ('share/icons', ['duck_calc/data/duck-calc.png']),
-        ('share/applications', ['duck_calc/data/duck-calc.desktop'])
-        ],
+          ('share/icons', ['duck_calc/data/duck-calc.png']),
+          ('share/applications', ['duck_calc/data/duck-calc.desktop'])
+      ],
       entry_points={
           'console_scripts': [
               'duck-calc-easter-egg=duck_calc.main:foo_run',
