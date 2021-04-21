@@ -2,6 +2,7 @@
 """
 import sys
 
+from PySide2 import QtCore
 from PySide2.QtWidgets import QApplication
 
 from .gui import calc_main
@@ -32,6 +33,7 @@ def foo_run():
 
 
 def run():
+    QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_ShareOpenGLContexts)
     app = QApplication([])
     widget = calc_main()
     widget.show()
