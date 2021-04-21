@@ -4,6 +4,7 @@
 import os
 import sys
 
+import PySide2.QtGui as QtGui
 from PySide2.QtCore import QFile
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QApplication, QWidget
@@ -23,6 +24,10 @@ class calc_main(QWidget):
         ui_file.open(QFile.ReadOnly)
         loader.load(ui_file, self)
         ui_file.close()
+        icon_src = os.path.join(os.path.dirname(__file__), "data/duck-calc.png")
+        icon = QtGui.QIcon()
+        icon.addFile(icon_src)
+        self.setWindowIcon(icon)
 
 
 if __name__ == "__main__":
