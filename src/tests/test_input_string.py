@@ -88,6 +88,7 @@ def test_solve_problem_with_int_result(problem, result):
     ("55.1^-55.2", 7.734491087991536e-97),
     ("-100.11^-10.9", -1.5660141108169798e-22),
     # sqrt
+    ("0_1", 0),
     ("1_1.1", 1),
     ("1_-10", 1),
     ("1 _ 1.1", 1),
@@ -121,7 +122,6 @@ def test_solve_problem_with_float_result(problem, result):
 
 @pytest.mark.parametrize("problem", [
     ("1/0"),
-    ("0_1"),
     ("5*(3+0)/0"),
     ("123412/0"),
     ("22+aaa"),
