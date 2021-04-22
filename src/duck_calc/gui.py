@@ -3,13 +3,12 @@
 
 import os
 import sys
-
 import PySide2.QtGui as QtGui
+from math_lib.math_lib import MathLib
+from PySide2 import QtCore
 from PySide2.QtCore import QFile
 from PySide2.QtUiTools import QUiLoader
 from PySide2.QtWidgets import QApplication, QWidget
-from PySide2 import QtCore
-from math_lib.math_lib import MathLib
 
 
 class calc_main(QWidget):
