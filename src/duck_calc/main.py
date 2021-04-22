@@ -1,8 +1,10 @@
 """Command line entry points (exec file)
 """
 import sys
+
 from PySide2 import QtCore
 from PySide2.QtWidgets import QApplication
+
 from .gui import calc_main
 
 
