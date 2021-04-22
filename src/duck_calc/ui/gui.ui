@@ -188,6 +188,9 @@ margin: 1px;</string>
      <height>61</height>
     </rect>
    </property>
+    <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odmocnina&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="styleSheet">
     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
 background-color: rgb(212, 212, 212);
@@ -259,6 +262,9 @@ margin: 1px;</string>
      <width>81</width>
      <height>61</height>
     </rect>
+   </property>
+    <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mocnina&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
