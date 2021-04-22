@@ -189,7 +189,7 @@ margin: 1px;</string>
     </rect>
    </property>
     <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odmocnina&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Odmocnina&lt;/p&gt;&lt;p&gt;X_Y&lt;/p&gt;&lt;p&gt;X = základ&lt;/p&gt;&lt;p&gt;Y = exponent&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
@@ -264,7 +264,7 @@ margin: 1px;</string>
     </rect>
    </property>
     <property name="toolTip">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mocnina&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mocnina&lt;br/&gt;X^Y&lt;/p&gt;&lt;p&gt;X = základ&lt;br/&gt;Y = exponent&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
