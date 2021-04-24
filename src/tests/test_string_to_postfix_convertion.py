@@ -1,5 +1,8 @@
 """@package tests
-Test string to postftix
+@file test_string_to_postfix_convertion.py
+@author Marek Klofera - xklofe01
+
+@brief Test string to postftix
 """
 import pytest
 
