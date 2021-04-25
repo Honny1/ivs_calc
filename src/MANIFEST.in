@@ -2,3 +2,5 @@ include ../README.md
 include ../LICENSE
 recursive-include duck_calc/ui *
 recursive-include duck_calc/data *
+recursive-include duck_calc/math_lib *
+
