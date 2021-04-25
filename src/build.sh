@@ -1,4 +1,6 @@
 #!/bin/bash
+# File: build.sh
+# Script pro vytvoreni debian balicku
 
 set -e
 version="0.0.0"
