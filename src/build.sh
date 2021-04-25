@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-version="0.0.0"
+version="1.0.0"
 
 # build dependency 
 sudo apt-get install -y build-essential devscripts debhelper debmake dh-python python3-all python3-pip python3-pyqt5 qt5-default 
