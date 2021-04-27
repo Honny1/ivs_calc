@@ -1,5 +1,9 @@
 """@package tests
-Test for solving the postfix equation
+
+@file test_solve_postfix_equastion
+@author Jan Suman xsuman02
+
+@brief Test for solving the postfix equation
 """
 
 import pytest

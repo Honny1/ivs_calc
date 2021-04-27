@@ -1,6 +1,10 @@
 """@package tests
-Test for input string
+@file test_input_string.py
+@author Jan Rodak - xrodak00
+
+@brief Test for input string
 """
+
 import pytest
 
 from duck_calc.math_lib.math_lib import MathLib
