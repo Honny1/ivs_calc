@@ -3,7 +3,7 @@
 # Script pro vytvoreni debian balicku
 
 set -e
-version="1.0.2"
+version="1.0.3"
 
 # build dependency 
 sudo apt-get install -y build-essential devscripts debhelper debmake dh-python python3-all python3-pip python3-pyqt5 qt5-default 
