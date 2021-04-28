@@ -18,11 +18,11 @@ run:
 
 # Spusti profiling
 profile:
-	$(PY) -m $(PROFILE_TOOL) profile.py < ../profiling/100.txt 
+	$(PY) -m $(PROFILE_TOOL) profiler.py < ../profiling/100.txt
 
 # Spusti profiling a vytvori obrazek z dat profileru
 profile-stats-img:
-	$(PY) -m $(PROFILE_TOOL) -o stats profile.py < ../profiling/100.txt 
+	$(PY) -m $(PROFILE_TOOL) -o stats profiler.py < ../profiling/100.txt
 	gprof2dot -f pstats stats | dot -Tpng -o output.png
 
 # Vygeneruje  documentaci
