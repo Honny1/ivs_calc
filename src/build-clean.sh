@@ -1,4 +1,6 @@
 #!/bin/bash
+# File: build-clean.sh
+# Skript na vycisteni vygenerovaných souboru build skriptem
 
 version="1.0.2"
 # Odstrani nepotrebne soubory po buildu
