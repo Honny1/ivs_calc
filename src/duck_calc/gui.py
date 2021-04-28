@@ -92,7 +92,7 @@ class calc_main(QWidget):
             return
         self.result_string = MathLib.solve_mathematic_problem(self.equation)
         if self.result_string is not None:
-            self.window_calc.result_label.setText(str(self.result_string))
+            self.window_calc.result_label.setText("{0:g}".format(self.result_string))
         else:
             self.window_calc.result_label.setText("ERROR")
 
