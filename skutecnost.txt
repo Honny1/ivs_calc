@@ -1,13 +1,13 @@
-TERMÍNY:                                                  SKUTECNOST
-	19.3. Setup GitHub - xrodak00                           - 19.3. Setup GitHub - xrodak00
-	31.3. Návrh rozhraní matematické knihovny - všichni
-	10.4. TDD pro matematickou knihovnu - všichni
-	17.4. Naprogramování matematické knihovny - xszabo16
-	17.4. GUI Kalkulačky - xsuman02
-	19.4. Zprovoznit Makefile - xsuman02
-	24.4. Instalátor - xrodak00
-  	24.4. Dokumentace - xszabo16
-	24.4. Profiling - xklofe01
-	25.4. Mock-upy - všichni
-	25.4. DEBUG - xszabo16
-	30.4. Odevzdání projektu - xszabo16
+TERMÍNY:                                                  SKUTEČNOST
+	19.3. Setup GitHub - xrodak00                           - 19.3. - xrodak00
+	31.3. Návrh rozhraní matematické knihovny - všichni     - 23.3. - všichni
+	10.4. TDD pro matematickou knihovnu - všichni           - 19.4. - všichni
+	17.4. Naprogramování matematické knihovny - xszabo16    - 21.4. - xszabo16
+	17.4. GUI Kalkulačky - xsuman02                         - 22.4. - xsuman02
+	19.4. Zprovoznit Makefile - xsuman02                    - 22.4. - xrodak00
+	24.4. Instalátor - xrodak00                             - 22.4. - xrodak00
+  	24.4. Dokumentace - xszabo16                            - 28.4. - xszabo16
+	24.4. Profiling - xklofe01                              - 28.4. - xklofe01
+	25.4. Mock-upy - všichni                                - 22.4. - všichni
+	25.4. DEBUG - xszabo16                                  - 21.4. (Na gitu až 28.4.) - xszabo16
+	30.4. Odevzdání projektu - xszabo16                     - 29.4. - xszabo16
