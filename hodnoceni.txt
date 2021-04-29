@@ -1,4 +1,4 @@
-xklofe01  () 
-xszabo16  () 
-xsuman02  ()
-xrodka00  ()
+xklofe01 100 (testy string na postfix, profillingova část projektu, kontrola Makefile)
+xszabo16 100 (vytvoření deadlinů, rozdělení práce, kontrola Pull Requestů, matematická knihovna, kontrola a úprava testů, nastavení doxygena a jeho generování, uživatelská dokumentace)
+xsuman02 100 (mock-upy, GUI kalkulačky, testy výpočtu postfix výrazů)
+xrodak00 100 (nastavení GitHubu, nastavení testů, nastavení CI, nastavení testů kódu, Makefile, instalační balíček, build skripty, testy výpočtu infix výrazu)
